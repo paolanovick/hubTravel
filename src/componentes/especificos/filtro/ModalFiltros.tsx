@@ -23,7 +23,7 @@ import {
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   
     const tipografia = tarjetas?.tipografia || "Verdana, sans-serif";
-    const colorPrimario = tarjetas?.color.primario || "#1976d2";
+    const colorPrimario = tarjetas?.color.primario || "black";
   
     return (
       <Modal open={open} onClose={onClose}>

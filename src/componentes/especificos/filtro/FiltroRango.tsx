@@ -68,31 +68,33 @@ const FiltroRango = ({ label, campo, min, max }: FiltroRangoProps) => {
 
       {/* Slider */}
       <Slider
-        value={valor}
-        onChange={handleChange}
-        valueLabelDisplay="auto"
-        min={min}
-        max={max}
-        sx={{
-          color: tarjetas?.color.primario || "#1976d2",
-          '& .MuiSlider-track': {
-            border: 'none',
-          },
-          '& .MuiSlider-thumb': {
-            width: 20,
-            height: 20,
-            backgroundColor: "#fff",
-            border: `2px solid ${tarjetas?.color.primario || "#1976d2"}`,
-            '&:hover': {
-              boxShadow: `0px 0px 0px 6px ${tarjetas?.color.primario || "#1976d2"}33`,
-            },
-          },
-          '& .MuiSlider-rail': {
-            opacity: 0.3,
-            backgroundColor: "#999",
-          },
-        }}
-      />
+  value={valor}
+  onChange={handleChange}
+  valueLabelDisplay="auto"
+  min={min}
+  max={max}
+  sx={{
+    color: "black", // Cambiar el color del slider a negro
+    '& .MuiSlider-track': {
+      border: 'none',
+      backgroundColor: "black", // Cambiar el color de la pista a negro
+    },
+    '& .MuiSlider-thumb': {
+      width: 20,
+      height: 20,
+      backgroundColor: "#fff", // El color del 'thumb' sigue siendo blanco
+      border: `2px solid black`, // El borde del 'thumb' será negro
+      '&:hover': {
+        boxShadow: `0px 0px 0px 6px black33`, // Sombra al hacer hover, negra
+      },
+    },
+    '& .MuiSlider-rail': {
+      opacity: 0.3,
+      backgroundColor: "#999", // Mantén el color del rail como gris claro
+    },
+  }}
+/>
+
     </Box>
   );
 };

@@ -33,7 +33,7 @@ const ModalConsultar = ({ open, onClose, colorPrimario, tipografia }: ModalConsu
         <Box
           sx={{
             backgroundColor: colorPrimario,
-            color: "white",
+            color: "black",
             padding: isMobile ? "12px" : "15px",
             textAlign: "center",
             fontFamily: tipografia,
@@ -103,7 +103,7 @@ const ModalConsultar = ({ open, onClose, colorPrimario, tipografia }: ModalConsu
               variant="contained"
               sx={{
                 backgroundColor: colorPrimario,
-                color: "white",
+                color: "black",
                 fontWeight: "bold",
                 fontFamily: tipografia,
                 minWidth: isMobile ? 150 : 200,

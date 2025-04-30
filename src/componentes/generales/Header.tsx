@@ -128,25 +128,28 @@ const Header: React.FC = () => {
             transition={{ duration: 1 }}
             whileHover={{ scale: 1.25 }}
           >
-            {datosGenerales?.logoAgencia && (
-              <Box
-                component="img"
-                src={datosGenerales.logoAgencia}
-                alt="Logo Agencia"
-                onClick={() => navigate("/")}
-                onError={(e) =>
-                  (e.currentTarget.style.display = "none")
-                }
-                sx={{
-                  height: { xs: 170, sm: 200, md: 250, lg: 300 },
-                  width: "auto",
-                  maxWidth: "90vw",
-                  cursor: "pointer",
-                  transition: "transform 0.3s ease-in-out",
-                  mt: { xs: 2, sm: 3, md: 4 },
-                }}
-              />
-            )}
+          {datosGenerales?.logoAgencia && (
+  <Box
+    component="img"
+    src={datosGenerales.logoAgencia}
+    alt="Logo Agencia"
+    onClick={() => navigate("/")}
+    onError={(e) =>
+      (e.currentTarget.style.display = "none")
+    }
+    sx={{
+      height: { xs: 120, sm: 150, md: 300, lg: 350 }, // Ajuste de altura en pantallas grandes
+      width: { xs: "80vw", sm: "70vw", md: "70vw", lg: "50vw" }, // Ajuste más grande para PC
+      maxWidth: "100%", // Evita que se estire más allá de su contenedor
+      objectFit: "contain", // Mantiene la proporción
+      cursor: "pointer",
+      transition: "transform 0.3s ease-in-out",
+      mt: { xs: 2, sm: 3, md: 4 },
+    }}
+  />
+)}
+
+
           </motion.div>
         </Box>
       </Toolbar>

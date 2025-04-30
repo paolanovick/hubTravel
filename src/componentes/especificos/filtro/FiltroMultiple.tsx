@@ -89,32 +89,51 @@ const FiltroMultiple = ({ label, campo, opciones }: FiltroMultipleProps) => {
       </Typography>
 
       {/* 🔹 Lista de checkboxes */}
-      <FormGroup>
-        {opciones.map((opcion) => (
-          <FormControlLabel
-            key={opcion}
-            control={
-              <Checkbox
-                checked={seleccionadas.includes(opcion)}
-                onChange={() => toggleOpcion(opcion)}
-                sx={{
-                  color: tarjetas?.color.primario,
-                  "&.Mui-checked": {
-                    color: tarjetas?.color.primario,
-                  },
-                }}
-              />
-            }
-            label={opcion}
-            sx={{
-              color: tarjetas?.tipografiaColorContenido || "#333",
-              fontFamily: tarjetas?.tipografia || "Verdana, sans-serif",
-              fontSize: "0.85rem",
-              mb: 1,
-            }}
-          />
-        ))}
-      </FormGroup>
+     <FormGroup>
+  {opciones.map((opcion) => (
+    <FormControlLabel
+      key={opcion}
+      control={
+        <Checkbox
+          checked={seleccionadas.includes(opcion)}
+          onChange={() => toggleOpcion(opcion)}
+          sx={{
+            // Estilo del checkbox no seleccionado
+            color: tarjetas?.color.primario || "#1976d2",
+            "&.Mui-checked": {
+              color: tarjetas?.color.primario || "#1976d2", // Color cuando está marcado
+            },
+            // Añadimos un borde y sombra para hacerlo más visible
+            "& .MuiSvgIcon-root": {
+              fontSize: 22, // Tamaño del icono del checkbox
+            },
+            "&.MuiCheckbox-root": {
+              border: `1px solid ${tarjetas?.color.primario || "#1976d2"}`, // Borde visible
+              backgroundColor: "black", // Fondo blanco
+              borderRadius: "50%", // Aseguramos que sea circular
+              boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.1)", // Sombra suave
+            },
+            // Ajustamos el hover
+            "&:hover": {
+              backgroundColor: "#f0f0f0", // Fondo al pasar el ratón
+            },
+          }}
+        />
+      }
+      label={opcion}
+      sx={{
+        color: tarjetas?.tipografiaColorContenido || "#333",
+        fontFamily: tarjetas?.tipografia || "Verdana, sans-serif",
+        fontSize: "0.85rem",
+        mb: 1.5, // Espaciado entre los checkboxes
+        "& .MuiFormControlLabel-label": {
+          fontWeight: "bold", // Texto en negrita
+        },
+      }}
+    />
+  ))}
+</FormGroup>
+
     </Box>
   );
 };

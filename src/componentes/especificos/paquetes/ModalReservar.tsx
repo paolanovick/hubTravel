@@ -59,7 +59,7 @@ const ModalReservar = ({ open, onClose, colorPrimario, tipografia }: ModalReserv
         {/* 🔹 Banner Superior */}
         <Box sx={{
           backgroundColor: colorPrimario,
-          color: "white",
+          color: "black",
           padding: isMobile ? "12px" : "15px",
           textAlign: "center",
           fontFamily: tipografia,
@@ -181,7 +181,7 @@ const ModalReservar = ({ open, onClose, colorPrimario, tipografia }: ModalReserv
               variant="contained"
               sx={{
                 backgroundColor: colorPrimario,
-                color: "white",
+                color: "black",
                 fontWeight: "bold",
                 fontFamily: tipografia,
                 minWidth: isMobile ? '100%' : 160,
@@ -224,14 +224,14 @@ const ModalReservar = ({ open, onClose, colorPrimario, tipografia }: ModalReserv
               variant="contained"
               sx={{
                 backgroundColor: colorPrimario,
-                color: "white",
+                color: "black",
                 fontWeight: "bold",
                 fontFamily: tipografia,
                 minWidth: isMobile ? '100%' : 220,
                 py: isMobile ? 1 : 1.2,
                 borderRadius: "8px",
                 fontSize: isMobile ? "1rem" : "1.2rem",
-                "&:hover": { backgroundColor: "#0056b3" }
+                "&:hover": { backgroundColor:"#f0f0f0"}
               }}
               onClick={() => {
                 console.log("Pasajeros:", pasajeros);

@@ -11,7 +11,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"],
   "exclude": ["node_modules"]

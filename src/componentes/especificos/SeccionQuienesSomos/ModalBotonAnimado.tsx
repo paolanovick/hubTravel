@@ -35,7 +35,7 @@ import {
             transform: "translate(-50%, -50%)",
             width: isMobile ? "95%" : isTablet ? "90%" : 600,
             maxWidth: "100%",
-            bgcolor: "white",
+            bgcolor: "black",
             boxShadow: 24,
             borderRadius: isMobile ? "20px" : "35px",
             overflow: "hidden",

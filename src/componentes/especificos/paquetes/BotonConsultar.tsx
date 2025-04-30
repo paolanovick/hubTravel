@@ -64,8 +64,8 @@ const handleClickBoton = () => {
   const esWhatsApp = tipo === "whatsapp";
   const esConsultarOReservar = tipo === "consultar" || tipo === "reservar";
 
-  const botonColor = esWhatsApp ? "#25D366" : "#fff";
-  const textoColor = esWhatsApp ? "#fff" : colorPrimario;
+  const botonColor = esWhatsApp ? "#25D366" : "black";
+  const textoColor = esWhatsApp ? "black" : colorPrimario;
 
   return (
     <Box sx={{ position: "relative", width: "100%" }}>
@@ -88,12 +88,12 @@ const handleClickBoton = () => {
               ? "#fff"
               : esConsultarOReservar
               ? colorSecundario
-              : "#FBC02D", // fallback
+              : "white", // fallback
             color: esWhatsApp
-              ? "#25D366"
+              ? "black"
               : esConsultarOReservar
-              ? "#fff"
-              : "#fff",
+              ? "black"
+              : "black",
             boxShadow: esWhatsApp ? "inset 0 0 0 3px #25D366" : "none",
           },
         }}
@@ -122,7 +122,7 @@ const handleClickBoton = () => {
           top: "50%",
           transform: "translateY(-50%)",
           backgroundColor: colorPrimario,
-          color: "#fff",
+          color: "black",
           width: 32,
           height: 32,
           transition: "all 0.3s ease-in-out",

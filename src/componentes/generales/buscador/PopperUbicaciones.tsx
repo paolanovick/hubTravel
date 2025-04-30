@@ -48,7 +48,7 @@ const PopperUbicaciones: React.FC<PopperUbicacionesProps> = ({
         <Box
           sx={{
             backgroundColor: colorPrimario,
-            color: "white",
+            color: "black",
             padding: "10px",
             display: "flex",
             alignItems: "center",

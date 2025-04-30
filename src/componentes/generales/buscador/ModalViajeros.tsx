@@ -13,7 +13,7 @@ import {
   } from "@mui/material";
   import CloseIcon from "@mui/icons-material/Close";
   import { useState } from "react";
-  import { useTarjetas, useDatosGenerales } from "../../../contextos/DatosAgenciaContext";
+  import { useTarjetas, } from "../../../contextos/DatosAgenciaContext";
   
   interface ModalViajerosProps {
     open: boolean;
@@ -26,7 +26,7 @@ import {
     const [menores, setMenores] = useState(0);
   
     const tarjetas = useTarjetas();
-    const datosGenerales = useDatosGenerales();
+   
   
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("sm"));

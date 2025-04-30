@@ -56,7 +56,7 @@ import {
           <Box
             sx={{
               backgroundColor: colorPrimario,
-              color: "white",
+              color: "",
               padding: isMobile ? "12px" : "15px",
               textAlign: "center",
               fontFamily: tipografia,
@@ -125,7 +125,7 @@ import {
                 variant="contained"
                 sx={{
                   backgroundColor: colorPrimario,
-                  color: "white",
+                  color: "black",
                   fontWeight: "bold",
                   fontFamily: tipografia,
                   minWidth: isMobile ? 150 : 200,

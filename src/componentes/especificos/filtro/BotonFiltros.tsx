@@ -51,7 +51,7 @@ const BotonFiltros = () => {
           startIcon={<FilterListIcon />}
           sx={{
             backgroundColor: colorPrimario,
-            color: "white",
+            color: "black",
             fontWeight: "bold",
             fontFamily: tipografia,
             borderRadius: "50px",
@@ -59,7 +59,7 @@ const BotonFiltros = () => {
             py: 1,
             fontSize: "0.9rem",
             "&:hover": {
-              backgroundColor: "#004080",
+              backgroundColor: "#666",
             },
           }}
         >

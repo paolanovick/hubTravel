@@ -41,7 +41,7 @@ const PopperOpciones: React.FC<PopperOpcionesProps> = ({
         <Box
           sx={{
             backgroundColor: colorPrimario,
-            color: "white",
+            color: "black",
             padding: "10px",
             display: "flex",
             alignItems: "center",
@@ -74,7 +74,7 @@ const PopperOpciones: React.FC<PopperOpcionesProps> = ({
           onClick={() => handleSelect("whatsapp")}
           sx={{ padding: "12px 20px", fontSize: "14px", fontFamily: tipografia, display: "flex", alignItems: "center" }}
         >
-          <WhatsAppIcon sx={{ marginRight: "10px", color: "#25D366" }} />
+          <WhatsAppIcon sx={{ marginRight: "10px", color: "black" }} />
           WhatsApp
         </MenuItem>
       </Paper>

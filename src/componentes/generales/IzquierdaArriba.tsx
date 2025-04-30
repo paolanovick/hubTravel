@@ -32,22 +32,27 @@ const IzquierdaArriba: FunctionComponent<IzquierdaArribaProps> = ({ logo }) => {
         textAlign: { xs: "center", sm: "left" },
       }}
     >
-      {logo && (
-        <Box
-          component="img"
-          src={logo}
-          alt="Logo"
-          sx={{
-            width: { xs: "50vw", sm: "35vw", md: "250px", lg: "300px" },
-            maxWidth: "100%",
-            maxHeight: 180,
-            objectFit: "contain",
-            mx: { xs: "auto", sm: 0 },
-            mb: { xs: 2, sm: 0 },
-            display: "block",
-          }}
-        />
-      )}
+   {logo && (
+  <Box
+    component="img"
+    src={logo}
+    alt="Logo"
+    className="logo-image"
+    sx={{
+      height: { xs: 120, sm: 150, md: 200, lg: 300 }, // Mayor tamaño en pantallas grandes
+      width: { xs: "80vw", sm: "70vw", md: "50vw", lg: "40vw" }, // Ajuste de tamaño más grande en PC
+      maxWidth: "100%",
+      objectFit: "contain",
+      cursor: "pointer",
+      transition: "transform 0.3s ease-in-out",
+      mt: { xs: 2, sm: 3, md: 4 },
+    }}
+  />
+)}
+
+
+
+
 
       <Typography
         variant="body2"

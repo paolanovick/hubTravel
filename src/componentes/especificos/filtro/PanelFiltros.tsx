@@ -15,8 +15,10 @@ const PanelFiltros = () => {
     tarjetas?.tipografiaColor || datosGenerales?.colorTipografiaAgencia || "#fff";
   const tipografia =
     tarjetas?.tipografia || datosGenerales?.tipografiaAgencia || "Verdana, sans-serif";
-  const fondo = tarjetas?.color?.terciario|| datosGenerales?.color?.secundario || "rgba(255,255,255,0.05)";
-
+ const fondo =
+    tarjetas?.color?.terciario ||
+    datosGenerales?.color?.secundario ||
+    "#f0f0f0"; // ← nuevo color de fondo por defecto
   return (
     <Box
       sx={{
