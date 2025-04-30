@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 const PublicidadCliente: React.FC = () => {
   const publicidadCliente = usePublicidadCliente();
   const datosGenerales = useDatosGenerales();
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery("(max-width:600px)");
 
   if (!publicidadCliente || !datosGenerales || !publicidadCliente.existe) {
     return null;
@@ -70,8 +70,8 @@ const PublicidadCliente: React.FC = () => {
           right: 0,
           height: 0,
           zIndex: -1,
-          pointerEvents: "none"
-        }
+          pointerEvents: "none",
+        },
       }}
     >
       {/* 🔥 TÍTULO */}
@@ -91,7 +91,14 @@ const PublicidadCliente: React.FC = () => {
       </Typography>
 
       {/* 🔥 CARRUSEL */}
-      <Box sx={{ position: "relative", zIndex: 1 }}>
+      <Box
+        sx={{
+          position: "relative",
+          zIndex: 1,
+          height: isMobile ? "300px" : "auto", // Usamos "auto" para la altura en PC
+          overflow: "hidden", // Oculta cualquier desbordamiento
+        }}
+      >
         <Slider {...settings} aria-label="Carrusel de imágenes publicitarias">
           {imagenes.map((imagen, index) => (
             <Box key={index} sx={{ display: "flex", justifyContent: "center" }}>
@@ -100,9 +107,8 @@ const PublicidadCliente: React.FC = () => {
                 alt={`Publicidad ${index + 1}`}
                 style={{
                   width: "100%",
-                  height: "auto",
-                  maxHeight: isMobile ? "300px" : "500px",
-                  objectFit: "cover",
+                  height: "auto", // Permite que la imagen ajuste su altura
+                  objectFit: "cover", // Mantiene la proporción de la imagen
                   borderRadius: "15px",
                 }}
               />
